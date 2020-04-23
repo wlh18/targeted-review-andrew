@@ -40,6 +40,7 @@
    <details>
    <summary>Show Answer</summary>
    A component based architecture means that a website is built from individual components. Ideally, it should be made from as few unique components as possible, reusing components whenever possible. This can be thought of like a set of legos. You may have the same lego appear 100 times in constructing a single piece, but that individual lego only needed to be designed once. The principle is the same with components. If we can design our components in such a way that they are able to be reused we will save ourselves a lot of time when it comes to actually building the website.
+
    <img src='https://rubygarage.s3.amazonaws.com/uploads/article_image/file/575/component-based-architecture.jpg'>
    </details>
 
@@ -54,8 +55,11 @@
 1. What is the component lifecycle?
    <details>
    <summary>Show Answer</summary>
-    The react component lifecycle refers to the life and death of a component in relation to its existence on the DOM.  It is made up of 3 parts: mounting, updating, and unmounting.  
+    The react component lifecycle refers to the life and death of a component in relation to its existence on the DOM.  It is made up of 3 parts: mounting, updating, and unmounting.  You can think of it like the lifcycle of a frog, the frog will move from tadpole, to frog, and will eventually die.
+
+
     <img src='https://lh3.googleusercontent.com/proxy/QcKoMPU-e0I_ZkvwUN49TSLFyGo5G2JFAoXwzFphPcLLkwGVrYor1JBwyj3YXVAcmu5lqqdwD6RwrcFCfyOXXwot_zJSnx8hcw_NumFBz386pE46q3x583OnFHk49ICgWD1KMSQyOh1RTLgh4w' height='250px'>
+
    </details>
 
 2. What are lifecycle methods?
