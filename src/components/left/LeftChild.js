@@ -1,4 +1,12 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import {
+  updateValue1,
+  updateValue2,
+  updateValue3,
+  updateValue4,
+  updateAllValues,
+} from '../../ducks/valuesReducer'
 
 const LeftChild = (props) => {
   const [value1, setValue1] = useState('')
@@ -6,11 +14,26 @@ const LeftChild = (props) => {
   const [value3, setValue3] = useState('')
   const [value4, setValue4] = useState('')
 
-  const submitValue1 = (value) => {}
-  const submitValue2 = (value) => {}
-  const submitValue3 = (value) => {}
-  const submitValue4 = (value) => {}
-  const submitAllValues = (value) => {}
+  const submitValue1 = () => {
+    props.updateValue1(value1)
+  }
+
+  const submitValue2 = () => {
+    props.updateValue2(value2)
+  }
+
+  const submitValue3 = () => {
+    props.updateValue3(value3)
+  }
+
+  const submitValue4 = () => {
+    props.updateValue4(value4)
+  }
+
+  const submitAllValues = () => {
+    const values = { value1, value2, value3, value4 }
+    props.updateAllValues(values)
+  }
 
   return (
     <div className="left-child">
@@ -54,4 +77,15 @@ const LeftChild = (props) => {
     </div>
   )
 }
-export default LeftChild
+
+const mapDispatchToProps = () => {
+  return {
+    updateValue1,
+    updateValue2,
+    updateValue3,
+    updateValue4,
+    updateAllValues,
+  }
+}
+
+export default connect(null, mapDispatchToProps())(LeftChild)
